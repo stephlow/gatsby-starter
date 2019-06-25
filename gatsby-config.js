@@ -1,11 +1,14 @@
+const siteMetadata = {
+  title: 'Gatsby Starter',
+  description: '',
+  author: '',
+  siteUrl: 'https://www.example.com',
+};
+
 module.exports = {
-  siteMetadata: {
-    title: 'Gatsby Starter',
-    description: '',
-    author: '',
-    siteUrl: 'https://www.example.com',
-  },
+  siteMetadata,
   plugins: [
+    'gatsby-plugin-eslint',
     'gatsby-plugin-styled-components',
     'gatsby-plugin-react-helmet',
     {
@@ -33,5 +36,13 @@ module.exports = {
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
     'gatsby-plugin-sitemap',
+    'gatsby-plugin-robots-txt',
+    {
+      resolve: 'gatsby-plugin-canonical-urls',
+      options: {
+        siteUrl: siteMetadata.siteUrl,
+        stripQueryString: true,
+      },
+    },
   ],
 };
