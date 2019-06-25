@@ -5,7 +5,7 @@ import { createGlobalStyle } from 'styled-components';
 
 import 'normalize.css/normalize.css';
 
-import SEO from './seo';
+import SEO from './SEO';
 
 const GlobalStyle = createGlobalStyle`
   body {}
